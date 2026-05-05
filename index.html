@@ -1,1 +1,182 @@
-waiting for claude
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>City of LaFayette | Office of Mayor Andy Arnold</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'la-blue': {
+              900: '#0f172a',
+              800: '#1e293b',
+              700: '#334155',
+              600: '#1d4ed8', /* Royal Blue Primary */
+              500: '#2563eb',
+              400: '#60a5fa',
+            },
+            'la-slate': {
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+            }
+          },
+          fontFamily: {
+            display: ['Montserrat', 'sans-serif'],
+            body: ['Open Sans', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    :root {
+      --la-primary: #1d4ed8;
+      --la-dark: #0f172a;
+      --white: #ffffff;
+    }
+
+    body { font-family: 'Open Sans', sans-serif; }
+    .font-display { font-family: 'Montserrat', sans-serif; }
+
+    #navbar.scrolled {
+      background: rgba(255, 255, 255, 0.98) !important;
+      border-bottom: 1px solid #e2e8f0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .btn-primary {
+      background: var(--la-primary);
+      color: #fff;
+      transition: all 0.2s ease;
+    }
+    .btn-primary:hover {
+      background: #1e40af;
+      transform: translateY(-1px);
+    }
+
+    #hero {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.8) 100%), 
+                  url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-hover {
+      transition: all 0.3s ease;
+      border: 1px solid #e2e8f0;
+    }
+    .card-hover:hover {
+      border-color: var(--la-primary);
+      box-shadow: 0 10px 25px rgba(29, 78, 216, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 px-6 py-5 transition-all duration-300">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+    <div class="flex flex-col">
+      <span id="nav-brand" class="font-display text-white text-xl font-extrabold tracking-tight">LaFayette</span>
+      <span id="nav-sub" class="text-la-blue-400 text-[0.6rem] uppercase tracking-[0.25em] font-bold">Mayor Andy Arnold</span>
+    </div>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#growth" class="nav-text text-white/80 hover:text-white text-xs font-bold uppercase tracking-widest">Growth</a>
+      <a href="#services" class="nav-text text-white/80 hover:text-white text-xs font-bold uppercase tracking-widest">Residents</a>
+      <button onclick="window.location.href='#contact'" class="btn-primary px-6 py-2.5 rounded text-xs font-bold uppercase">Mayor's Direct Line</button>
+    </div>
+  </div>
+</nav>
+
+<section id="hero" class="min-h-screen flex items-center relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 w-full z-10 pt-20">
+    <div class="max-w-3xl">
+      <div class="inline-block bg-la-blue-600 text-white text-[0.65rem] font-black uppercase tracking-[0.2em] px-3 py-1 mb-6 rounded-sm">
+        Moving LaFayette Forward
+      </div>
+      <h1 class="font-display text-white text-5xl md:text-7xl font-extrabold leading-[1.1] mb-6">
+        Building a <span class="text-la-blue-400">Game-Changing</span> Future.
+      </h1>
+      <p class="text-la-slate-300 text-lg md:text-xl font-light mb-10 leading-relaxed">
+        Prioritizing economic stability, sustainable infrastructure, and a high quality of life for every LaFayette family.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <button class="btn-primary px-10 py-4 rounded font-bold text-sm uppercase shadow-xl">The Pilgrim's Project</button>
+        <button class="bg-white/10 text-white hover:bg-white/20 backdrop-blur-md px-10 py-4 rounded font-bold text-sm uppercase transition-all">Report a City Issue</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="growth" class="py-24 bg-la-slate-100">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="font-display text-3xl font-extrabold text-la-dark mb-4">Strategic Priorities</h2>
+      <div class="w-16 h-1.5 bg-la-blue-600 mx-auto"></div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card-hover bg-white p-10 rounded-lg text-center">
+        <div class="text-la-blue-600 font-black text-4xl mb-4">01</div>
+        <h3 class="font-display font-bold text-lg mb-3">Job Creation</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Fostering industrial partnerships that bring long-term, stable careers to Walker County.</p>
+      </div>
+      <div class="card-hover bg-white p-10 rounded-lg text-center">
+        <div class="text-la-blue-600 font-black text-4xl mb-4">02</div>
+        <h3 class="font-display font-bold text-lg mb-3">City Transparency</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Providing residents with a direct, open line to city leadership and public records.</p>
+      </div>
+      <div class="card-hover bg-white p-10 rounded-lg text-center">
+        <div class="text-la-blue-600 font-black text-4xl mb-4">03</div>
+        <h3 class="font-display font-bold text-lg mb-3">Modern Utilities</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Investing in the core infrastructure that keeps our city running efficiently 24/7.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-la-dark py-12">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+    <div class="text-la-slate-300 text-sm font-medium">
+      © 2026 City of LaFayette. Office of Mayor Andy Arnold.
+    </div>
+    <div class="flex gap-8 text-[0.65rem] font-bold text-la-blue-400 uppercase tracking-[0.2em]">
+      <a href="#" class="hover:text-white transition-colors">Utility Portal</a>
+      <a href="#" class="hover:text-white transition-colors">City Council</a>
+      <a href="#" class="hover:text-white transition-colors">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    const brand = document.getElementById('nav-brand');
+    const sub = document.getElementById('nav-sub');
+    const texts = document.querySelectorAll('.nav-text');
+    
+    if (window.scrollY > 50) {
+      nav.classList.add('scrolled');
+      brand.classList.replace('text-white', 'text-la-dark');
+      sub.classList.replace('text-la-blue-400', 'text-la-blue-600');
+      texts.forEach(t => t.classList.replace('text-white/80', 'text-slate-600'));
+    } else {
+      nav.classList.remove('scrolled');
+      brand.classList.replace('text-la-dark', 'text-white');
+      sub.classList.replace('text-la-blue-600', 'text-la-blue-400');
+      texts.forEach(t => t.classList.replace('text-slate-600', 'text-white/80'));
+    }
+  });
+</script>
+
+</body>
+</html>
